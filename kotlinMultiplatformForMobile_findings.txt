@@ -1,0 +1,64 @@
+Findings:
+
+Pros (especially compared to other cross platform methods):
+    General:
+        - Setup is easy
+        - Code sharing easy
+        - One can share almost everything (business logic)
+            - Database -> SqlDelight
+            - Networking -> Ktor
+            - General Business logic
+        - Platform specific implementations are easy
+            - using expect/actual
+            - using interfaces and providers
+        - (Dependency Injection possible)
+            - using koin
+            - using kodein (only iOS and android)
+        - The idea is to only share business logic and not ui stuff
+            - leveraging the platform specific strenghts regarding ui
+            - complete freedom in ui design (within platform specifig boundaries)
+        
+        - Future:
+            - Kotlin 1.4
+                - Multithreaded coroutines on native
+                - new kotlin compiler
+                    - one compiler for all targets
+                    - faster build speeds on native 
+            - iOS development plugin for Android studio
+                - run, debug, test code
+                - simulators
+        
+
+    Android:
+        - Almost the same as when developing a normal app
+        - Performance the same
+        - enforces separation of business logic and ui logic
+        - debugging is the same
+        - app size is the same
+        - build time the same
+    
+    iOS:
+        - easy to use kotlin code from swift
+        - all important platform libs have a kotlin binding (like: dispatch_queues)
+
+Cons:
+    General:
+        - not many well known libraries
+            - especially for networking and Database. There the only real options are Ktor and SqlDelight
+
+    Android:
+        - One has to pay attention for objects which are being frozen on native. Something that works on android does not necessarily work on native
+        - not that many libs for simple stuff like UUID
+
+
+    iOS:
+        - Hard to debug
+            - either use a xcode plugin
+            - or use the command line
+        - freezing
+        - memory model
+        - binary incompatibility between kotlin versions
+            - especially hurtful when having many third party libs
+        - build times
+        - coroutines are single threaded only
+        - stacktraces are good but a bit harder to read compared to "plain" jvm kotlin
