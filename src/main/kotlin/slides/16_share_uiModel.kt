@@ -6,10 +6,7 @@ import kpresentation.KPresentationBuilder
 import kpresentation.SlideData
 import kpresentation.sourceCode
 import org.w3c.dom.HTMLElement
-import react.dom.a
-import react.dom.div
-import react.dom.span
-import react.dom.strong
+import react.dom.*
 import react.useEffect
 import react.useRef
 import styled.*
@@ -36,23 +33,20 @@ fun KPresentationBuilder.s16_share_uiModel() = slide(infos) { props ->
 
     styledH3 {
         css {
-            marginTop = 0.5.em
+            margin(0.5.em)
             transition(::fontSize, 500.ms)
             fontSize = if (props.state == 1) 1.em else 0.em
         }
+
         +"Move ui logic to shared code"
-    }
-    styledH3 {
-        css {
-            marginBottom = 0.5.em
-            transition(::fontSize, 500.ms)
-            fontSize = if (props.state == 1) 1.em else 0.em
-        }
+        br {}
         +"Keep ui itself platform specific"
     }
 
     styledDiv {
         css {
+            transition(::height, 0.3.s, delay = 0.5.s)
+            transition(::opacity, 0.3.s, delay = 0.5.s)
             height = if (props.state == 2) 100.pct else 0.px
             opacity = if (props.state == 2) 1f else 0f
         }
@@ -137,7 +131,7 @@ private fun CSSBuilder.item(visibleState: Int, currentState: Int) {
     display = Display.flex
     flexDirection = FlexDirection.row
     justifyContent = JustifyContent.spaceBetween
-    transition(::fontSize, 500.ms)
+    transition(::fontSize, 500.ms, delay = if (visibleState == 3)  0.5.s else 0.s)
     fontSize = if (currentState < visibleState) 0.em else 1.em
     marginTop = 0.2.em
 }

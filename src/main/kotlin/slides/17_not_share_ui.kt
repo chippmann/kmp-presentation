@@ -31,7 +31,7 @@ fun KPresentationBuilder.s17_not_share_ui() = slide(infos) { props ->
                 transition(::fontSize, 0.3.s)
                 fontSize = if (props.state >= 1) 1.em else 0.em
             }
-            +" Or should you? \uD83E\uDD14"
+            +" ...Or should you? \uD83E\uDD14"
         }
     }
 
