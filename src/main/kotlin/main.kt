@@ -38,6 +38,10 @@ fun main() {
             s10_kmm_setup()
             s11_kmm_gradle_setup()
             s12_kmm_gradle_dependencies()
+            s13_what_to_share()
+            s14_share_businesslogic()
+            s15_share_datalayer()
+            s16_share_uiModel()
         }
     }
 }
