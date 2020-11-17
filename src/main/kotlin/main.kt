@@ -45,6 +45,9 @@ fun main() {
             s17_not_share_ui()
             s19_kmm_problems()
             s20_kmm_problems_android()
+            s21_kmm_problems_ios()
+            s22_kmm_problems_ios_freezing()
+            s23_kmm_problems_ios_freezing_example()
         }
     }
 }
