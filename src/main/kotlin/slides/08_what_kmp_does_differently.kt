@@ -10,7 +10,7 @@ import react.dom.*
 import styled.*
 
 private fun CSSBuilder.tableStyle(state: Int) {
-    width = 80.pct
+    fontSize = 1.em
 
     th {
         textAlign = TextAlign.left
@@ -26,7 +26,7 @@ private fun CSSBuilder.tableStyle(state: Int) {
     }
 }
 
-fun KPresentationBuilder.s03_what_kmp_does_differently(title: String, subtitle: String = "", arguments: List<Pair<String, String>>, notesString: String = "") = slide(
+fun KPresentationBuilder.s08_what_kmp_does_differently(title: String, subtitle: String = "", arguments: List<Pair<String, String>>, notesString: String = "") = slide(
     SlideData(
         notes = notes(notesString),
         stateCount = (arguments.size * 2) + 1
@@ -39,7 +39,7 @@ fun KPresentationBuilder.s03_what_kmp_does_differently(title: String, subtitle: 
 
     styledH2 {
         css {
-            margin(0.5.em)
+            marginTop = 0.5.em
         }
         +title
     }
@@ -47,7 +47,8 @@ fun KPresentationBuilder.s03_what_kmp_does_differently(title: String, subtitle: 
     if (subtitle.isNotEmpty()) {
         styledH3 {
             css {
-                marginBottom = 0.5.em
+                marginTop = 0.1.em
+                marginBottom = 1.em
             }
             +subtitle
         }

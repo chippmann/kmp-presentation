@@ -2,10 +2,7 @@ import kotlinx.browser.document
 import kpresentation.Move
 import kpresentation.presentation
 import react.dom.render
-import slides.s01_intro
-import slides.s02_agenda
-import slides.s02_why_not_use
-import slides.s03_what_kmp_does_differently
+import slides.*
 import styled.injectGlobal
 import styling.globalCss
 
@@ -16,16 +13,20 @@ fun main() {
 
         presentation(defaultTransition = Move) {
             s01_intro()
-            s02_agenda()
-            s02_why_not_use()
-            s03_what_kmp_does_differently(
+            s02_person()
+            s03_why_not_use()
+            s04_agenda()
+            s05_kmp_brief_explanation()
+            s06_targets()
+            s07_sales_pitch()
+            s08_what_kmp_does_differently(
                 "Code Sharing",
                 arguments = listOf(
                     "Share was sinn macht" to "Share alles",
                     "Schreibe UI platform speziefisch und nutze alles was die platform zur verfügung stellt" to "Schreibe UI einmal und benutze eine limitierte anzahl views oder baue native views selber nach"
                 )
             )
-            s03_what_kmp_does_differently(
+            s08_what_kmp_does_differently(
                 "Platform API's (zB. Bluetooth)",
                 arguments = listOf(
                     "Schreibe platform speziefisch" to "Schreibe platform speziefisch",
@@ -33,14 +34,10 @@ fun main() {
                     "Verwende eine library" to "Verwende eine library"
                 )
             )
-            s03_what_kmp_does_differently(
-                "Fehlende implementationen",
-                "(welche auf anderen platformen existiert)",
-                listOf(
-                    "Write replacements where missing and let compiler use platform specifics where available" to "Write platform specific wrappers AND replacements",
-                    "Use a library" to "Use a library"
-                )
-            )
+            s09_kmm_personal_experience()
+            s10_kmm_setup()
+            s11_kmm_gradle_setup()
+            s12_kmm_gradle_dependencies()
         }
     }
 }

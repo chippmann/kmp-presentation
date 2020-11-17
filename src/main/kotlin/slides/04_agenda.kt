@@ -3,14 +3,12 @@ package slides
 import kotlinx.css.*
 import kpresentation.KPresentationBuilder
 import react.dom.li
-import react.dom.p
-import react.dom.ul
 import styled.css
 import styled.styledH1
 import styled.styledUl
 
 
-fun KPresentationBuilder.s02_agenda() = slide {
+fun KPresentationBuilder.s04_agenda() = slide {
     styledH1 {
         css {
             margin(0.5.em)

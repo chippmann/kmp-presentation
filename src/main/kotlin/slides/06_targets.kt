@@ -55,19 +55,10 @@ private fun CSSBuilder.targetsStyle(state: Int) {
 }
 
 private val infos = SlideData(
-        stateCount = 6,
-        notes = notes(
-                """
-                    [0,1,2]The Kodein Framework aims at providing a set of high level tools for **multiplatform development** targetting every platform Kotlin can compiles to.
-                    Today, we'll be talking about a library that focuses especially on **mobile platforms** and desktop, because of its embedded nature.
-                    [3]We have also plans to make it work on Kotlin/Javascript for the web.
-                    However, under no circumstances the database we are about to discuss should be used in a **server**.
-                    [4]Even though it works on a JVM, it is not at all optimised for server usage, and will under-perform. Please don't do this.
-                """.trimIndent()
-        )
+        stateCount = 6
 )
 
-fun KPresentationBuilder.s04_targets() = slide(infos) { props ->
+fun KPresentationBuilder.s06_targets() = slide(infos) { props ->
     styledDiv {
         fun CSSBuilder.absolute(top: LinearDimension, left: LinearDimension) {
             position = Position.absolute

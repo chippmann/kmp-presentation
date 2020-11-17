@@ -15,7 +15,7 @@ private val infos = SlideData(
         stateCount = 2
 )
 
-fun KPresentationBuilder.s02_why_not_use() = slide(infos) { props ->
+fun KPresentationBuilder.s03_why_not_use() = slide(infos) { props ->
 
     styledH2 {
         css {

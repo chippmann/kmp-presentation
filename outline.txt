@@ -2,7 +2,6 @@
 
 - intro:
     - Infos zur person und bezug zum thema
-    - infos zu abkürzungen (pers erfahrung, opinionized)
     - why kmp
 
 - agenda
