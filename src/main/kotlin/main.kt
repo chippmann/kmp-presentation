@@ -42,6 +42,7 @@ fun main() {
             s14_share_businesslogic()
             s15_share_datalayer()
             s16_share_uiModel()
+            s17_not_share_ui()
         }
     }
 }

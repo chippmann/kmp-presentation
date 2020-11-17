@@ -36,11 +36,18 @@ fun KPresentationBuilder.s16_share_uiModel() = slide(infos) { props ->
 
     styledH3 {
         css {
-            margin(0.5.em)
+            marginTop = 0.5.em
             transition(::fontSize, 500.ms)
             fontSize = if (props.state == 1) 1.em else 0.em
         }
         +"Move ui logic to shared code"
+    }
+    styledH3 {
+        css {
+            marginBottom = 0.5.em
+            transition(::fontSize, 500.ms)
+            fontSize = if (props.state == 1) 1.em else 0.em
+        }
         +"Keep ui itself platform specific"
     }
 
