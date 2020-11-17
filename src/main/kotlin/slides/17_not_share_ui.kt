@@ -24,7 +24,7 @@ fun KPresentationBuilder.s17_not_share_ui() = slide(infos) { props ->
         css {
             margin(0.5.em)
         }
-        +"Dont share the UI!"
+        +"Don't share the UI!"
 
         styledSpan {
             css {
