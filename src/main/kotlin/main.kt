@@ -3,6 +3,7 @@ import kpresentation.Move
 import kpresentation.presentation
 import react.dom.render
 import slides.s01_intro
+import slides.s02_agenda
 import slides.s02_why_not_use
 import slides.s03_what_kmp_does_differently
 import styled.injectGlobal
@@ -15,25 +16,26 @@ fun main() {
 
         presentation(defaultTransition = Move) {
             s01_intro()
+            s02_agenda()
             s02_why_not_use()
             s03_what_kmp_does_differently(
                 "Code Sharing",
                 arguments = listOf(
-                    "Share what makes sense" to "Share everything",
-                    "Write UI platform specific and use everything it provides" to "Write UI once and use a limited set or write custom views"
+                    "Share was sinn macht" to "Share alles",
+                    "Schreibe UI platform speziefisch und nutze alles was die platform zur verfügung stellt" to "Schreibe UI einmal und benutze eine limitierte anzahl views oder baue native views selber nach"
                 )
             )
             s03_what_kmp_does_differently(
-                "Platform API's (ex. Bluetooth)",
+                "Platform API's (zB. Bluetooth)",
                 arguments = listOf(
-                    "Write platform specific" to "Write platform specific",
-                    "Let compiler choose the correct implementation" to "Manually choose the correct implementation for a given platform",
-                    "Use a library" to "Use a library"
+                    "Schreibe platform speziefisch" to "Schreibe platform speziefisch",
+                    "Lasse den compiler die richtige impl während des kompilierens verwenden" to "Selektiere die richtige impl während die App läuft manuell",
+                    "Verwende eine library" to "Verwende eine library"
                 )
             )
             s03_what_kmp_does_differently(
-                "Missing implementations",
-                "(which are available on some platforms)",
+                "Fehlende implementationen",
+                "(welche auf anderen platformen existiert)",
                 listOf(
                     "Write replacements where missing and let compiler use platform specifics where available" to "Write platform specific wrappers AND replacements",
                     "Use a library" to "Use a library"

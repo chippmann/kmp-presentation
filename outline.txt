@@ -1,0 +1,58 @@
+- Landing page
+
+- intro:
+    - Infos zur person und bezug zum thema
+    - infos zu abkürzungen (pers erfahrung, opinionized)
+    - why kmp
+
+- agenda
+
+
+- kmp kurz zusammengefasst:
+    - different parts of kmp:
+        - kotlin/Jvm
+        - kotlin native
+        - kotlin js
+    - targets
+    - versprechen (sales pitch)
+    - kmp vs generic cross platform
+
+- kmp in der praxis (persönliche erfahrungen):
+    - poc at abacus
+    - plexcompanion
+
+    - setup
+    - what to share
+        - business logik
+        - data layer
+        - ui model
+    - what not to share
+        - disclaimer: compose for desktop
+    - quick look at some code
+
+
+- kmp problems:
+    - for android devs:
+        - pay attention
+        - libs
+    - for iOS devs:
+        - two IDE's
+        - at least two languages
+        - debugging across boundaries
+        - debugging in general
+            - cmdline
+            - xcode plugin (NOT recommended)
+    - build times
+    - elephant in the room:
+        - kotlin memory management (native)
+        - let's play a game
+        - new memory manager
+
+- summary
+    - versprechen analysiert
+- recommendation
+- what we'll do
+- some good posts/talks
+- presentation reveal
+- thx & questions
+
