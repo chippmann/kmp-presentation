@@ -43,6 +43,8 @@ fun main() {
             s15_share_datalayer()
             s16_share_uiModel()
             s17_not_share_ui()
+            s19_kmm_problems()
+            s20_kmm_problems_android()
         }
     }
 }
