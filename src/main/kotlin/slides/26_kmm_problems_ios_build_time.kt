@@ -9,6 +9,8 @@ import react.useEffect
 import styled.*
 
 private val buildTimePoints = listOf(
+    "Actual compilation reasonably fast",
+    "~80% of time is spent on linking and binary generation",
     "No incremental build support",
     "Relatively big memory consumption",
     "c interop code generation",

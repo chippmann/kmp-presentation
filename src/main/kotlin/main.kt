@@ -53,6 +53,7 @@ fun main() {
             s25_kmm_problems_ios_freezing_solution()
             s26_kmm_problems_ios_build_time()
             s27_kmm_problems_ios_stacktraces()
+            s28_kmm_problems_ios_code_generation()
         }
     }
 }
