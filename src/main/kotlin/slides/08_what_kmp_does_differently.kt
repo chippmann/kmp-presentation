@@ -59,7 +59,7 @@ fun KPresentationBuilder.s08_what_kmp_does_differently(title: String, subtitle: 
             tableStyle(props.state)
         }
         tr {
-            th { +"Generisches Cross Platform framework" }
+            th { +"Generic cross platform framework" }
             th { +"KMP" }
         }
         var lastStep= 0

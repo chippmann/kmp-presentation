@@ -11,10 +11,10 @@ import styled.styledLi
 import styled.styledUl
 
 private val agendaEntries = listOf(
-    "KMP kurz zusammengefasst",
-    "KMP in der Praxis",
-    "KMP Probleme",
-    "Zusammenfassung & Einschätzung",
+    "KMP brief explanation",
+    "KMP in practise",
+    "KMP problems",
+    "Summary & evaluation",
 )
 
 private val infos = SlideData(
