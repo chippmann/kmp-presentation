@@ -11,7 +11,7 @@ import kotlin.Float
 import kotlin.random.Random
 
 private val infos = SlideData(
-    stateCount = 8
+    stateCount = 9
 )
 
 fun KPresentationBuilder.s05_kmp_brief_explanation() = slide(infos) { props ->
@@ -21,57 +21,6 @@ fun KPresentationBuilder.s05_kmp_brief_explanation() = slide(infos) { props ->
         }
         +"Keywords"
     }
-
-//    styledUl {
-//        css {
-//            alignSelf = Align.stretch
-//        }
-//        styledLi {
-//            css {
-//                display = Display.flex
-//                flexDirection = FlexDirection.row
-//                justifyContent = JustifyContent.end
-//            }
-//            styledDiv {
-//                css {
-//                    css {
-//                        display = Display.flex
-//                        flexDirection = FlexDirection.row
-//                    }
-//                }
-//                p {
-//                    +"key"
-//                }
-//                p {
-//                    +"value"
-//                }
-//            }
-//            styledDiv {
-//                css {
-//                    css {
-//                        display = Display.flex
-//                        flexDirection = FlexDirection.row
-//                    }
-//                }
-//                p {
-//                    +"key"
-//                }
-//                p {
-//                    +"value"
-//                }
-//            }
-//        }
-//        li {
-//            div {
-//                p {
-//                    +"key"
-//                }
-//                p {
-//                    +"value"
-//                }
-//            }
-//        }
-//    }
 
     styledDiv {
         css {
@@ -216,7 +165,7 @@ fun KPresentationBuilder.s05_kmp_brief_explanation() = slide(infos) { props ->
                     if (props.state < 1) opacity = 0.0
                     transition(::opacity, delay = 2.7.s, duration = 0.3.s)
                     classes.add("keyword")
-                    classes.add("target")
+                    classes.add("targetJs")
                 }
                 +"Kotlin/Js${if (props.state < 3) "?" else ""}"
             }
@@ -251,6 +200,19 @@ private fun CSSBuilder.explanationStyle(state: Int) {
                 }
                 +"target" {
                     backgroundColor = if (state >= 7 ) {
+                        Color("#00ff23")
+                    } else {
+                        Color("#EDEDED")
+                    }
+
+                    color = if (state >= 7 ) {
+                        Color("#000000")
+                    } else {
+                        Color("#444444")
+                    }
+                }
+                +"targetJs" {
+                    backgroundColor = if (state == 7) {
                         Color("#00ff23")
                     } else {
                         Color("#EDEDED")

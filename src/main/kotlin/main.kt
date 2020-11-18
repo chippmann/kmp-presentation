@@ -22,16 +22,16 @@ fun main() {
             s08_what_kmp_does_differently(
                 "Code Sharing",
                 arguments = listOf(
-                    "Share was sinn macht" to "Share alles",
-                    "Schreibe UI platform speziefisch und nutze alles was die platform zur verfügung stellt" to "Schreibe UI einmal und benutze eine limitierte anzahl views oder baue native views selber nach"
+                    "Share what makes sense" to "Share everything",
+                    "Write UI platform specific and use what the platform provides" to "Write UI once, use what view the framework provides or write your own"
                 )
             )
             s08_what_kmp_does_differently(
-                "Platform API's (zB. Bluetooth)",
+                "Platform API's (ex. Bluetooth)",
                 arguments = listOf(
-                    "Schreibe platform speziefisch" to "Schreibe platform speziefisch",
-                    "Lasse den compiler die richtige impl während des kompilierens verwenden" to "Selektiere die richtige impl während die App läuft manuell",
-                    "Verwende eine library" to "Verwende eine library"
+                    "Write platform specific" to "Write platform specific",
+                    "Let the compiler choose the correct impl at copile time" to "Choose the correct impl manually at runtime",
+                    "Use a library" to "Use a library"
                 )
             )
             s09_kmm_personal_experience()
