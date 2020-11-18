@@ -12,6 +12,6 @@ fun KPresentationBuilder.s09_kmm_personal_experience() = slide { props ->
         css {
             margin(0.5.em)
         }
-        +"KMM in der Praxis"
+        +"KMM in practise"
     }
 }
