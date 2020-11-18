@@ -27,7 +27,20 @@ private val freezingExistencePoints = listOf(
 )
 
 private val infos = SlideData(
-    stateCount = whatsFreezing.size + freezingExistencePoints.size + 2
+    stateCount = whatsFreezing.size + freezingExistencePoints.size + 2,
+    notes = notes(
+        """
+        Ohne shared mutable data, keine mutex nötig
+        Somit keine race conditions und fixe performance
+        
+        Actor based programming
+        Ein thread ist owner des objekts, andere threads fragen diesen nach daten oder geben actionen in auftrag
+        
+        Geschichte
+        Objective-C model zu begin -> kann keine object graphs with cycles -> handled by dev, no option
+        Jetzt: immer noch ref counting, +cyclic garbage collector -> kontrolliert refs by trial deletion
+        """.trimIndent()
+    )
 )
 
 fun KPresentationBuilder.s22_kmm_problems_ios_freezing() = slide(infos) { props ->

@@ -21,7 +21,18 @@ private val problemsOfFreezing = listOf(
 )
 
 private val infos = SlideData(
-    stateCount = problemsOfFreezing.size + 4
+    stateCount = problemsOfFreezing.size + 4,
+    notes = notes(
+        """
+        Performance ist nie so gut wie mit traditionellen trading modellen.
+        Ein thread alleine verwaltet daten, andere threads warten in einer queue
+        
+        GC: schwierig high throughput zu erzielen, speziell bei grossen allocations
+        
+        Desswegen coroutines auf native immernoch single threaded by default
+        Multithreading branches -> problems
+        """.trimIndent()
+    )
 )
 
 fun KPresentationBuilder.s24_kmm_problems_ios_freezing_2() = slide(infos) { props ->
