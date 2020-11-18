@@ -55,6 +55,43 @@ fun main() {
             s27_kmm_problems_ios_stacktraces()
             s28_kmm_problems_ios_code_generation()
             s29_sales_pitch_analysis()
+            s30_recommendation()
+            recommendation_base(
+                "Is KMM production ready?",
+                "NO. It's in alpha and that shows"
+            )
+            recommendation_base(
+                "Can we still use it in projects?",
+                """
+                    It dependes...
+                    If the project fit's and everybody is open minded, sure!
+                """.trimIndent()
+            )
+            recommendation_base(
+                "What dev machine to use?",
+                """
+                If it's possible to test most of the shared code on the
+                dev machine, it doesn't matter. Otherwise use macOS.
+            """.trimIndent()
+            )
+            recommendation_base(
+                    "What team composition to build?",
+            """
+                At least one dedicated dev per target. Ideally someone
+                experienced but not necessary.
+                At least one dev who is very experienced with kotlin AND gradle!
+            """.trimIndent()
+            )
+            recommendation_base(
+                "Will you use it in production?",
+                """
+                Yes. We evaluated it and it suits our needs.
+                We'll develop a feature we agreed on with KMM and
+                if the struggle is manageable, we'll continue with it
+            """.trimIndent()
+            )
+            s31_talks()
+            s32_presentation_reveal()
         }
     }
 }
