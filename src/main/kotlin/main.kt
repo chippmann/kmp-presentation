@@ -54,6 +54,7 @@ fun main() {
             s26_kmm_problems_ios_build_time()
             s27_kmm_problems_ios_stacktraces()
             s28_kmm_problems_ios_code_generation()
+            s29_sales_pitch_analysis()
         }
     }
 }
