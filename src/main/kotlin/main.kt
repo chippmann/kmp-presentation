@@ -43,11 +43,14 @@ fun main() {
             s15_share_datalayer()
             s16_share_uiModel()
             s17_not_share_ui()
+            s18_some_code()
             s19_kmm_problems()
             s20_kmm_problems_android()
             s21_kmm_problems_ios()
             s22_kmm_problems_ios_freezing()
             s23_kmm_problems_ios_freezing_example()
+            s24_kmm_problems_ios_freezing_2()
+            s25_kmm_problems_ios_freezing_solution()
         }
     }
 }
