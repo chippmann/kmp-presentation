@@ -51,6 +51,8 @@ fun main() {
             s23_kmm_problems_ios_freezing_example()
             s24_kmm_problems_ios_freezing_2()
             s25_kmm_problems_ios_freezing_solution()
+            s26_kmm_problems_ios_build_time()
+            s27_kmm_problems_ios_stacktraces()
         }
     }
 }

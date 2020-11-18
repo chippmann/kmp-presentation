@@ -17,7 +17,8 @@ private val kmmProblemsIOs = listOf(
     "Binary incompatibility between kotlin versions",
     "Build times",
     "Coroutines (Multithreading in general)",
-    "Stacktraces (not too bad though)"
+    "Stacktraces (not too bad though)",
+    "No annotation processing, but compiler plugins"
 )
 
 private val infos = SlideData(

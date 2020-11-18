@@ -9,7 +9,7 @@ import react.useEffect
 import styled.*
 
 private val infos = SlideData(
-    stateCount = 6
+    stateCount = 9
 )
 
 fun KPresentationBuilder.s18_some_code() = slide(infos) { props ->
@@ -25,6 +25,103 @@ fun KPresentationBuilder.s18_some_code() = slide(infos) { props ->
     }
 
     if (props.state == 1) {
+        sourceCode(
+            "kotlin",
+            """
+        //commonMain
+        class Greeting() {
+            fun greeting(): String {
+                return "Hello, ${'$'}{Platform().platform}!"
+            }
+        }
+        
+        expect class Platform() {
+            val platform: String
+        }
+    """.trimIndent()
+        ) {
+            useEffect {
+                height = 100.pct
+            }
+            "code" {
+                overflow = Overflow.hidden
+            }
+
+            "span" {
+                +"c-marker" {
+                    opacity = 1.0
+                    verticalAlign = VerticalAlign.middle
+                    transition(::opacity, 300.ms)
+                    transition(::lineHeight, 300.ms)
+                    transition(::fontSize, 300.ms)
+                }
+            }
+        }
+    }
+
+    if (props.state == 2) {
+        sourceCode(
+            "kotlin",
+            """
+        //androidMain
+        actual class Platform actual constructor() {
+            actual val platform: String = 
+                "Android ${'$'}{Build.VERSION.SDK_INT}"
+        }
+    """.trimIndent()
+        ) {
+            useEffect {
+                height = 100.pct
+            }
+            "code" {
+                overflow = Overflow.hidden
+            }
+
+            "span" {
+                +"c-marker" {
+                    opacity = 1.0
+                    verticalAlign = VerticalAlign.middle
+                    transition(::opacity, 300.ms)
+                    transition(::lineHeight, 300.ms)
+                    transition(::fontSize, 300.ms)
+                }
+            }
+        }
+    }
+
+    if (props.state == 3) {
+        sourceCode(
+            "kotlin",
+            """
+        //iosMain
+        actual class Platform actual constructor() {
+            actual val platform: String = 
+                UIDevice.currentDevice.systemName() 
+                + " " 
+                + UIDevice.currentDevice.systemVersion
+        }
+    """.trimIndent()
+        ) {
+            useEffect {
+                height = 100.pct
+            }
+            "code" {
+                overflow = Overflow.hidden
+            }
+
+            "span" {
+                +"c-marker" {
+                    opacity = 1.0
+                    verticalAlign = VerticalAlign.middle
+                    transition(::opacity, 300.ms)
+                    transition(::lineHeight, 300.ms)
+                    transition(::fontSize, 300.ms)
+                }
+            }
+        }
+    }
+
+    if (props.state == 4) {
         sourceCode(
             "kotlin",
             """
@@ -54,7 +151,7 @@ fun KPresentationBuilder.s18_some_code() = slide(infos) { props ->
         }
     }
 
-    if (props.state in 2 .. 3) {
+    if (props.state in 5 .. 6) {
         sourceCode(
             "kotlin",
             """
@@ -108,16 +205,16 @@ fun KPresentationBuilder.s18_some_code() = slide(infos) { props ->
                     transition(::fontSize, 300.ms)
                 }
                 +"c-common" {
-                    fontSize = if (props.state == 2) 1.em else 0.em
+                    fontSize = if (props.state == 5) 1.em else 0.em
                 }
                 +"c-specific" {
-                    fontSize = if (props.state == 3) 1.em else 0.em
+                    fontSize = if (props.state == 6) 1.em else 0.em
                 }
             }
         }
     }
 
-    if (props.state in 4 .. 5) {
+    if (props.state in 7 .. 8) {
         sourceCode(
             "kotlin",
             """
@@ -161,10 +258,10 @@ fun KPresentationBuilder.s18_some_code() = slide(infos) { props ->
                     transition(::fontSize, 300.ms)
                 }
                 +"c-common" {
-                    fontSize = if (props.state == 4) 1.em else 0.em
+                    fontSize = if (props.state == 7) 1.em else 0.em
                 }
                 +"c-specific" {
-                    fontSize = if (props.state == 5) 1.em else 0.em
+                    fontSize = if (props.state == 8) 1.em else 0.em
                 }
             }
         }
